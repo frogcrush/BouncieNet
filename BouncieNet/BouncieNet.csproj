@@ -1,13 +1,24 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFrameworks>net6.0;net8.0</TargetFrameworks>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+
+    <PackageId>BouncieNet</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Authors>Tylor Pater</Authors>
+    <Description>A Refit-powered library for interacting with the Bouncie API.</Description>
+    <Copyright>(C) 2025 Tylor Pater</Copyright>
+    <PackageProjectUrl>https://github.com/frogcrush/bouncienet</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/frogcrush/bouncienet</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="BouncieClient.cs" />
+        <None Include="$(MSBuildThisFileDirectory)\..\README.md" Pack="true" PackagePath="\" />
+        <None Include="$(MSBuildThisFileDirectory)\..\LICENSE.txt" Pack="true" PackagePath="\" />
   </ItemGroup>
 
   <ItemGroup>
