@@ -39,7 +39,7 @@ namespace BouncieNet
         public DateTime? EndsBefore { get; set; }
 
         [AliasAs("gps-format")]
-        public GpsFormatEnum? GpsFormat { get; set; }
+        public GpsFormatEnum? GpsFormat { get; set; } = GpsFormatEnum.GeoJson;
 
         [AliasAs("imei")]
         public string? Imei { get; set; }

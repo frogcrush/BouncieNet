@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+﻿using GeoJSON.Text;
+using System.Text.Json.Serialization;
 
 namespace BouncieNet.Models
 {
@@ -14,10 +15,10 @@ namespace BouncieNet.Models
         public int HardAccelerationCount { get; set; }
 
         [JsonPropertyName("distance")]
-        public int Distance { get; set; }
+        public double DistanceInMiles { get; set; }
 
         [JsonPropertyName("gps")]
-        public string Gps { get; set; }
+        public GeoJSONObject? Gps { get; set; }
 
         [JsonPropertyName("startTime")]
         public DateTime StartTime { get; set; }
@@ -26,25 +27,25 @@ namespace BouncieNet.Models
         public DateTime EndTime { get; set; }
 
         [JsonPropertyName("startOdometer")]
-        public int StartOdometer { get; set; }
+        public double StartOdometer { get; set; }
 
         [JsonPropertyName("endOdometer")]
-        public int EndOdometer { get; set; }
+        public double EndOdometer { get; set; }
 
         [JsonPropertyName("averageSpeed")]
-        public int AverageSpeed { get; set; }
+        public double AverageSpeedInMph { get; set; }
 
         [JsonPropertyName("maxSpeed")]
-        public int MaxSpeed { get; set; }
+        public int MaxSpeedInMph { get; set; }
 
         [JsonPropertyName("fuelConsumed")]
-        public int FuelConsumed { get; set; }
+        public int FuelConsumedInGallons { get; set; }
 
         [JsonPropertyName("timeZone")]
         public string TimeZone { get; set; }
 
         [JsonPropertyName("totalIdleDuration")]
-        public int TotalIdleDuration { get; set; }
+        public double TotalIdleDuration { get; set; }
 
         [JsonPropertyName("imei")]
         public string Imei { get; set; }

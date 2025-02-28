@@ -2,16 +2,16 @@
 
 namespace BouncieNet.Models
 {
-    public class Mil
+    public class MalfunctionIndicatorLight
     {
         [JsonPropertyName("milOn")]
-        public bool MilOn { get; set; }
+        public bool IndicatorLightOn { get; set; }
 
         [JsonPropertyName("lastUpdated")]
         public DateTime LastUpdated { get; set; }
 
         [JsonPropertyName("qualifiedDtcList")]
-        public List<QualifiedDtcList> QualifiedDtcList { get; set; }
+        public List<QualifiedDiagnosticTroubleCode> QualifiedDiagnosticCodeList { get; set; }
 
         [JsonPropertyName("battery")]
         public Battery Battery { get; set; }

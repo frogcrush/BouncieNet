@@ -2,7 +2,7 @@
 
 namespace BouncieNet.Models
 {
-    public class QualifiedDtcList
+    public class QualifiedDiagnosticTroubleCode
     {
         [JsonPropertyName("code")]
         public string Code { get; set; }

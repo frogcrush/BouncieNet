@@ -8,7 +8,7 @@ namespace BouncieNet.Models
         public string LocalTimeZone { get; set; }
 
         [JsonPropertyName("odometer")]
-        public int Odometer { get; set; }
+        public double Odometer { get; set; }
 
         [JsonPropertyName("lastUpdated")]
         public DateTime LastUpdated { get; set; }
@@ -17,15 +17,15 @@ namespace BouncieNet.Models
         public Location Location { get; set; }
 
         [JsonPropertyName("fuelLevel")]
-        public int FuelLevel { get; set; }
+        public double FuelLevel { get; set; }
 
         [JsonPropertyName("isRunning")]
         public bool IsRunning { get; set; }
 
         [JsonPropertyName("speed")]
-        public int Speed { get; set; }
+        public double Speed { get; set; }
 
         [JsonPropertyName("mil")]
-        public Mil Mil { get; set; }
+        public MalfunctionIndicatorLight MalfunctionIndicatorLight { get; set; }
     }
 }

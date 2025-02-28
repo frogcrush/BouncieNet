@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
 
     <PackageId>BouncieNet</PackageId>
-    <PackageVersion>1.0.1</PackageVersion>
+    <PackageVersion>1.0.2</PackageVersion>
     <Authors>Tylor Pater</Authors>
     <Description>A Refit-powered library for interacting with the Bouncie API.</Description>
     <Copyright>(C) 2025 Tylor Pater</Copyright>
@@ -22,6 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="GeoJSON.Text" Version="1.1.0" />
     <PackageReference Include="Microsoft.Extensions.Options" Version="9.0.2" />
     <PackageReference Include="Refit" Version="8.0.0" />
     <PackageReference Include="Refit.HttpClientFactory" Version="8.0.0" />
