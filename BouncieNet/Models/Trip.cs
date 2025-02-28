@@ -17,8 +17,9 @@ namespace BouncieNet.Models
         [JsonPropertyName("distance")]
         public double DistanceInMiles { get; set; }
 
+        // TODO: unsure if
         [JsonPropertyName("gps")]
-        public GeoJSONObject? Gps { get; set; }
+        public GeoJSON.Text.Geometry.LineString? Gps { get; set; }
 
         [JsonPropertyName("startTime")]
         public DateTime StartTime { get; set; }
@@ -36,10 +37,10 @@ namespace BouncieNet.Models
         public double AverageSpeedInMph { get; set; }
 
         [JsonPropertyName("maxSpeed")]
-        public int MaxSpeedInMph { get; set; }
+        public double MaxSpeedInMph { get; set; }
 
         [JsonPropertyName("fuelConsumed")]
-        public int FuelConsumedInGallons { get; set; }
+        public double FuelConsumedInGallons { get; set; }
 
         [JsonPropertyName("timeZone")]
         public string TimeZone { get; set; }

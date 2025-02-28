@@ -42,13 +42,18 @@ namespace BouncieNet
         public GpsFormatEnum? GpsFormat { get; set; } = GpsFormatEnum.GeoJson;
 
         [AliasAs("imei")]
-        public string? Imei { get; set; }
+        public string Imei { get; set; }
 
         [AliasAs("starts-after")]
         public DateTime? StartsAfter { get; set; }
 
         [AliasAs("transaction-id")]
         public string? TransactionId { get; set; }
+
+        public GetTripsRequestParameters(string imei)
+        {
+            Imei = imei;
+        }
     }
 
     public enum GpsFormatEnum

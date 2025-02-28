@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
 
     <PackageId>BouncieNet</PackageId>
-    <PackageVersion>1.0.3</PackageVersion>
+    <PackageVersion>1.0.4</PackageVersion>
     <Authors>Tylor Pater</Authors>
     <Description>A Refit-powered library for interacting with the Bouncie API.</Description>
     <Copyright>(C) 2025 Tylor Pater</Copyright>
