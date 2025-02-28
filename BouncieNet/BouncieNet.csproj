@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
 
     <PackageId>BouncieNet</PackageId>
-    <PackageVersion>1.0.0</PackageVersion>
+    <PackageVersion>1.0.1</PackageVersion>
     <Authors>Tylor Pater</Authors>
     <Description>A Refit-powered library for interacting with the Bouncie API.</Description>
     <Copyright>(C) 2025 Tylor Pater</Copyright>
@@ -17,8 +17,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-        <None Include="$(MSBuildThisFileDirectory)\..\README.md" Pack="true" PackagePath="\" />
-        <None Include="$(MSBuildThisFileDirectory)\..\LICENSE.txt" Pack="true" PackagePath="\" />
+    <None Include="$(MSBuildThisFileDirectory)\..\README.md" Pack="true" PackagePath="\" />
+    <None Include="$(MSBuildThisFileDirectory)\..\LICENSE.txt" Pack="true" PackagePath="\" />
   </ItemGroup>
 
   <ItemGroup>

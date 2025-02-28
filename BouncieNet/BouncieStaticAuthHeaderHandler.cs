@@ -24,7 +24,7 @@ namespace BouncieNet
         {
             if (_previousResult != null)
             {
-                if (DateTime.UtcNow < DateTimeOffset.FromUnixTimeSeconds(_previousResult.ExpiresIn))
+                if (DateTime.UtcNow < _previousResult.Expiry)
                 {
                     return _previousResult.AccessToken;
                 }
@@ -51,7 +51,7 @@ namespace BouncieNet
 
             if (!result.IsSuccessStatusCode)
             {
-                throw new Exception("Failed to get auth token");
+                throw new Exception($"Failed to get auth token: server returned status code: {result.StatusCode}");
             }
 
             var content = await result.Content.ReadFromJsonAsync<BouncieAuthResult>(cancellationToken: token) ?? throw new Exception("Could not deserialize auth token.");
