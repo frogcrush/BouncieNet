@@ -14,7 +14,7 @@ namespace BouncieNet
 
         public static IServiceCollection AddBouncieClient(this IServiceCollection services)
         {
-            services.AddSingleton<BouncieStaticAuthHeaderHandler>();
+            services.AddTransient<BouncieStaticAuthHeaderHandler>();
             services.AddRefitClient<IBouncieClient>()
                 .ConfigureHttpClient(c => c.BaseAddress = new Uri("https://api.bouncie.dev"))
                 .AddHttpMessageHandler<BouncieStaticAuthHeaderHandler>();

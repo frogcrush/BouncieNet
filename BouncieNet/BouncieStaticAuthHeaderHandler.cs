@@ -6,7 +6,7 @@ namespace BouncieNet
     public class BouncieStaticAuthHeaderHandler : DelegatingHandler
     {
         private BouncieConfiguration _config;
-        private BouncieAuthResult? _previousResult;
+        private static BouncieAuthResult? _previousResult;
 
         public BouncieStaticAuthHeaderHandler(IOptions<BouncieConfiguration> config)
         {
@@ -16,7 +16,12 @@ namespace BouncieNet
         protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
             var token = await GetAuthToken(cancellationToken);
-            request.Headers.Add("Authorization", token);
+            if (string.IsNullOrEmpty(token))
+            {
+                throw new Exception("Failed to get auth token.");
+            }
+
+            request.Headers.TryAddWithoutValidation("Authorization", token);
             return await base.SendAsync(request, cancellationToken);
         }
 
